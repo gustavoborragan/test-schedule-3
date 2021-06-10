@@ -1,0 +1,22 @@
+name: test cada hora a las y media
+
+on:
+  schedule:
+    - cron: "30 */1 * * *"
+
+jobs:
+  prueba:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo
+        run: |
+             echo "Hola"
+
+      - name: list
+        run: |
+             ls -lhtrsa
+
+      - name: curl
+        run: |
+             curl www.google.es
+
